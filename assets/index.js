@@ -1,3 +1,4 @@
+//Toggle the visibility of the Time input in New Countdown Modal
 document.getElementById("inputTimeCheck").addEventListener("click", (e) => {
   const timeInput = document.getElementById("inputTimeDiv");
 
@@ -9,3 +10,4 @@ document.getElementById("inputTimeCheck").addEventListener("click", (e) => {
     timeInput.classList.toggle("visible");
   }
 });
+console.log(getCountdowns());
