@@ -11,7 +11,8 @@ function createCard(countdown) {
   date.classList = "card-subtitle mb-2 text-muted";
   date.innerText = dateToString(new Date(countdown.date));
   const countdownElement = document.createElement("h2");
-  countdownElement.classList = "card-text text-center";
+  countdownElement.classList = "card-text text-center countdown";
+  countdownElement.setAttribute("data-countdown", countdown.date);
   const button = document.createElement("button");
   button.classList = "btn btn-primary btn-sm float-end";
   button.innerText = "Button";

@@ -61,3 +61,4 @@ function loadCards() {
 }
 
 loadCards();
+setInterval(updateCountdowns, 1000);
