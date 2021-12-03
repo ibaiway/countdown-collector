@@ -23,3 +23,13 @@
     animation: octocat-wave 560ms ease-in-out;
   }
 }
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
