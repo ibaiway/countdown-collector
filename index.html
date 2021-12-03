@@ -18,17 +18,25 @@
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Countdown Collector</span>
+        <button
+          type="button"
+          class="btn btn-primary btn-sm d-md-none"
+          data-bs-toggle="modal"
+          data-bs-target="#newCountdownModal"
+        >
+          Add new
+        </button>
       </div>
     </nav>
     <main class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-6">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
           <div class="card mt-3">
             <div class="card-body">
               <h5 class="card-title">Mom´s birthday</h5>
               <h6 class="card-subtitle mb-2 text-muted">2021/12/26</h6>
               <h2 class="card-text text-center">25D 5h 3m 2s</h2>
-              <button class="btn btn-primary float-end" type="button">
+              <button class="btn btn-primary btn-sm float-end" type="button">
                 Button
               </button>
             </div>
@@ -37,7 +45,15 @@
       </div>
     </main>
 
-    <div class="position-absolute bottom-0 end-0 translate-middle">
+    <div
+      class="
+        position-absolute
+        bottom-0
+        end-0
+        translate-middle
+        d-none d-md-block
+      "
+    >
       <button
         type="button"
         class="btn btn-primary"
