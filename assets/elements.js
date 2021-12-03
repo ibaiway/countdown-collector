@@ -9,7 +9,7 @@ function createCard(countdown) {
   title.innerText = countdown.title;
   const date = document.createElement("h6");
   date.classList = "card-subtitle mb-2 text-muted";
-  date.innerText = new Date(countdown.date);
+  date.innerText = dateToString(new Date(countdown.date));
   const countdownElement = document.createElement("h2");
   countdownElement.classList = "card-text text-center";
   const button = document.createElement("button");
@@ -29,4 +29,19 @@ function createCard(countdown) {
 function insertCard(card) {
   const cardHolder = document.getElementById("cardHolder");
   cardHolder.appendChild(card);
+}
+
+function dateToString(dateObject) {
+  const date = dateObject.toLocaleString([], {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  });
+  const time = dateObject.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  let stringDate = date + " " + time;
+
+  return stringDate;
 }
