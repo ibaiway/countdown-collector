@@ -34,6 +34,7 @@ function insertCountdown(countdown) {
   setCountdowns(countdowns);
 }
 
+// Receives input values, unifies date and time
 function addCountdown() {
   let title = document.getElementById("inputTitle").value;
   let date = document.getElementById("inputDate").value;
@@ -46,7 +47,17 @@ function addCountdown() {
 
   let countdown = createCountdown(title, date);
   insertCountdown(countdown);
+  console.log(createCard(countdown));
+  const card = createCard(countdown);
+  insertCard(card);
 }
 
-console.log("on load");
-console.table(getCountdowns());
+//Loads and inserts all the card on the global variable countdowns
+function loadCards() {
+  countdowns.forEach((countdown) => {
+    const card = createCard(countdown);
+    insertCard(card);
+  });
+}
+
+loadCards();
