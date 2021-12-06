@@ -37,12 +37,14 @@ function insertCountdown(countdown) {
 // Receives input values, unifies date and time
 function addCountdown() {
   let title = document.getElementById("inputTitle").value;
-  let date = document.getElementById("inputDate").value;
+  let date = new Date(document.getElementById("inputDate").value);
   const checkbox = document.getElementById("inputTimeCheck").checked;
+  console.log(date);
 
   if (checkbox) {
-    let time = document.getElementById("inputTime").value;
-    date = new Date(date + "T" + time + ":00");
+    const time = document.getElementById("inputTime").value.split(":");
+    date.setHours(time[0]);
+    date.setMinutes(time[1]);
   }
 
   let countdown = createCountdown(title, date);
